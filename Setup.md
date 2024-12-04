@@ -62,22 +62,16 @@ Alternatively, you can use Spring Initializr to generate the project:
 
 * ### Step 3: Configure Database (MySQL)
   We’ll use MySQL for our database. Make sure MySQL is installed and running on your machine.
+  We already have a database setup on the cloud, feel free to use it!
 
-1. Create a Database
-Open your MySQL command line or preferred MySQL client and create a new database:
-```
-CREATE DATABASE yubazaar_db;
-```
-
-2. Configure Application Properties
+1. Configure Application Properties
 Open the src/main/resources/application.properties file and configure the database connection:
 ```
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
 spring.application.name=YU Bazaar
-spring.datasource.url=jdbc:mysql://localhost:3306/yubazaar_db
-spring.datasource.username=your_mysql_username
-spring.datasource.password=your_mysql_password
+spring.datasource.url=jdbc:mysql://sql3.freesqldatabase.com:3306/sql3745490
+spring.datasource.username=sql3745490
+spring.datasource.password=AngjI9RbdA
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.mail.host=smtp.gmail.com
