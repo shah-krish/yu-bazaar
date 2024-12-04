@@ -38,7 +38,7 @@ Ensure it’s version 11 or higher.
 * ### Step 1: Clone the Repository
 Clone the YU Bazaar repository from GitHub:
 ```bash
-  git clone https://github.com/shah-krish/yu-bazaar.git
+  git clone https://github.com/hvpham-yorku/YuBazaar.git
   cd YU-Bazaar
 ```
 * ### Step 2: Initialize a Spring Boot Project
@@ -72,12 +72,22 @@ CREATE DATABASE yubazaar_db;
 2. Configure Application Properties
 Open the src/main/resources/application.properties file and configure the database connection:
 ```
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.application.name=YU Bazaar
 spring.datasource.url=jdbc:mysql://localhost:3306/yubazaar_db
 spring.datasource.username=your_mysql_username
 spring.datasource.password=your_mysql_password
-
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=yubazaarassistant@gmail.com
+spring.mail.password=npgz hhve jhnz ovop
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
 
 ```
 * ### Step 4: Run the Application
